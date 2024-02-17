@@ -1,13 +1,13 @@
-package com.promotores.puntosdeaccesowificdmx.controller;
+package com.puntosdeaccesowifi.cdmx.controller;
 
+import com.puntosdeaccesowifi.cdmx.entities.Wifi;
+import com.puntosdeaccesowifi.cdmx.service.WifiService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.geo.Point;
 import org.springframework.web.bind.annotation.*;
-import com.promotores.puntosdeaccesowificdmx.entities.Wifi;
-import com.promotores.puntosdeaccesowificdmx.service.WifiService;
 
 @RestController
 @RequestMapping("/api/wifi")

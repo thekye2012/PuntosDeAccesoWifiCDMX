@@ -1,16 +1,14 @@
-package com.promotores.puntosdeaccesowificdmx.service;
+package com.puntosdeaccesowifi.cdmx.service;
 
 import org.springframework.data.geo.Point;
-import com.promotores.puntosdeaccesowificdmx.entities.Wifi;
-import com.promotores.puntosdeaccesowificdmx.repository.WifiRepository;
+import com.puntosdeaccesowifi.cdmx.entities.Wifi;
+import com.puntosdeaccesowifi.cdmx.repository.WifiRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
-
-import java.util.List;
 
 @Service
 public class WifiService {

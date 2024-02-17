@@ -1,7 +1,7 @@
-package com.promotores.puntosdeaccesowificdmx.controller;
+package com.puntosdeaccesowifi.cdmx.controller;
 
-import com.promotores.puntosdeaccesowificdmx.entities.Wifi;
-import com.promotores.puntosdeaccesowificdmx.service.WifiService;
+import com.puntosdeaccesowifi.cdmx.entities.Wifi;
+import com.puntosdeaccesowifi.cdmx.service.WifiService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.geo.Point;

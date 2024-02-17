@@ -1,18 +1,13 @@
-package com.promotores.puntosdeaccesowificdmx.repository;
+package com.puntosdeaccesowifi.cdmx.repository;
 
-import org.springframework.data.geo.Point;
-import com.promotores.puntosdeaccesowificdmx.entities.Wifi;
-import jakarta.annotation.PostConstruct;
-import org.springframework.beans.factory.annotation.Autowired;
+
+import com.puntosdeaccesowifi.cdmx.entities.Wifi;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.mongodb.core.index.IndexOperations;
+import org.springframework.data.geo.Point;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 import org.springframework.stereotype.Repository;
-import org.springframework.data.mongodb.core.MongoTemplate;
-
-import java.util.Optional;
 
 @Repository
 public interface WifiRepository extends MongoRepository<Wifi, String> {

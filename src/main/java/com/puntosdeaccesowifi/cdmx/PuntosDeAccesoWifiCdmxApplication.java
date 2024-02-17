@@ -1,4 +1,4 @@
-package com.promotores.puntosdeaccesowificdmx;
+package com.puntosdeaccesowifi.cdmx;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

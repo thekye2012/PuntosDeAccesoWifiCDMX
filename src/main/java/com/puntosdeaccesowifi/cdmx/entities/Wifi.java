@@ -1,12 +1,16 @@
-package com.promotores.puntosdeaccesowificdmx.entities;
+package com.puntosdeaccesowifi.cdmx.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.GeoSpatialIndexType;
 import org.springframework.data.mongodb.core.index.GeoSpatialIndexed;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.geo.Point;
+import org.springframework.data.mongodb.core.mapping.Field;
+
 import java.time.LocalDate;
 import java.util.List;
 
@@ -19,7 +23,8 @@ public class Wifi {
 
     @Id
     @JsonIgnore // Indica que '_id' se excluirá en la serialización a JSON
-    private String _id;
+    @Field("_id") // Nombre del campo en MongoDB
+    private String idMongodb; // ID de MongoDB
 
     private String id; // ID del punto de acceso WiFi
     private String programa;
