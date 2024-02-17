@@ -12,6 +12,12 @@ services:
       - ./DB/wifi.metadata.json:/data/wifi.metadata.json
       - ./import.sh:/docker-entrypoint-initdb.d/import.sh
     restart: always
+  puntosdeacceso:
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongo
 
 volumes:
   mongodb-data:
