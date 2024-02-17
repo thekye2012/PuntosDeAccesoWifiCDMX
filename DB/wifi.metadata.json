@@ -1,0 +1,1 @@
+{"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_"},{"v":{"$numberInt":"2"},"key":{"ubicacion":"2dsphere"},"name":"ubicacion_2dsphere","2dsphereIndexVersion":{"$numberInt":"3"}}],"uuid":"254d2378d4434db992c86ad337c5c35c","collectionName":"wifi","type":"collection"}

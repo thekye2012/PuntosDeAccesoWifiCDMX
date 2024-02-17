@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+
+  mongo:
+    image: mongo:latest
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb-data:/data/db
+      - ./DB/wifi.bson:/data/wifi.bson
+      - ./DB/wifi.metadata.json:/data/wifi.metadata.json
+      - ./import.sh:/docker-entrypoint-initdb.d/import.sh
+    restart: always
+
+volumes:
+  mongodb-data:

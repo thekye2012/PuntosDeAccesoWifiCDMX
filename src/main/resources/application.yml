@@ -1,0 +1,10 @@
+server:
+    port: 3000
+
+spring:
+  graphql:
+    graphiql:
+      enabled: true
+  data:
+    mongodb:
+      uri: mongodb://host.docker.internal:27017/puntosDeAcceso
