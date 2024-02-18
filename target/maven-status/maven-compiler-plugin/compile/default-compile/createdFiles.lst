@@ -1,0 +1,7 @@
+com\puntosdeaccesowifi\cdmx\controller\GraphqlController.class
+com\puntosdeaccesowifi\cdmx\entities\Wifi.class
+com\puntosdeaccesowifi\cdmx\controller\WifiController.class
+com\puntosdeaccesowifi\cdmx\exceptions\GlobalExceptionHandler.class
+com\puntosdeaccesowifi\cdmx\PuntosDeAccesoWifiCdmxApplication.class
+com\puntosdeaccesowifi\cdmx\service\WifiService.class
+com\puntosdeaccesowifi\cdmx\repository\WifiRepository.class

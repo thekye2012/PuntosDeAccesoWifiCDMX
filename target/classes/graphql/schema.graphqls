@@ -1,0 +1,24 @@
+type Query {
+    getAllWifi(page: Int, size: Int): WifiPage
+    getWifiById(id: ID!): Wifi
+    getWifiByAlcaldia(alcaldia: String!, page: Int, size: Int): WifiPage
+    getWifiByUbicacion(latitud: Float!, longitud: Float!, page: Int, size: Int): WifiPage
+}
+
+type Wifi {
+    id: String!
+    programa: String!
+    fechaInstalacion: String
+    latitud: Float!
+    longitud: Float!
+    colonia: String!
+    alcaldia: String!
+}
+
+type WifiPage {
+    content: [Wifi]
+    totalPages: Int
+    totalElements: Int
+    size: Int
+    number: Int
+}

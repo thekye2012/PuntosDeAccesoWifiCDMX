@@ -1,0 +1,4 @@
+com\puntosdeaccesowifi\cdmx\controller\WifiControllerTest.class
+com\puntosdeaccesowifi\cdmx\PuntosDeAccesoWifiCdmxApplicationTests.class
+com\puntosdeaccesowifi\cdmx\controller\GraphqlControllerTest.class
+com\puntosdeaccesowifi\cdmx\exceptions\GlobalExceptionHandlerTest.class
