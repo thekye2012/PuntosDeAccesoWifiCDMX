@@ -414,6 +414,10 @@ query {
   }
 }
 ```
+
+## SonarQube - Análisis de Código 
+![Sonar](/sonar.png)
+
 Prueba Tecnica para Desarrollador Backend - Java - MongoDB - GraphQL - REST API - Docker - Swagger - Documentación - Gerardo Guzman Chavez
 
 
