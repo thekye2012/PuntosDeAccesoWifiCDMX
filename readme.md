@@ -26,6 +26,12 @@ Esta API permite interactuar con una base de datos de puntos de acceso WiFi, ofr
    ```
    http://localhost:3000/swagger-ui/index.html
    ```
+4. **Acceder a Interfaz -Interactiva (GraphiQL)**
+
+   Una vez que los servicios estén en funcionamiento, puedes acceder a GraphiQL disponible en:
+   ```
+   http://localhost:3000/graphiql
+   ```
 
 ### Solución de Problemas
 
