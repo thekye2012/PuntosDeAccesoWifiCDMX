@@ -8,10 +8,22 @@ services:
       - "27017:27017"
     volumes:
       - mongodb-data:/data/db
-      - ./DB/wifi.bson:/data/wifi.bson
-      - ./DB/wifi.metadata.json:/data/wifi.metadata.json
-      - ./import.sh:/docker-entrypoint-initdb.d/import.sh
-    restart: always
+  db-setup:
+    image: mongo:latest
+    volumes:
+      - ./DB:/data/db-setup
+    depends_on:
+      - mongo
+    command: >
+      /bin/bash -c "
+        echo 'Esperando a que MongoDB esté listo...';
+        while ! mongosh --host mongo --eval 'quit(db.runCommand({ ping: 1 }).ok ? 0 : 2)' &>/dev/null; do
+          sleep 1;
+        done;
+        echo 'MongoDB está listo, ejecutando comandos de importación...';
+        mongorestore --uri='mongodb://mongo:27017/puntosDeAcceso' --db puntosDeAcceso --collection wifi /data/db-setup/wifi.bson
+        mongoimport --uri='mongodb://mongo:27017/puntosDeAcceso' --db puntosDeAcceso --collection wifi --file /data/db-setup/wifi.metadata.json
+      "
   puntosdeacceso:
     build: .
     ports:
