@@ -2,36 +2,42 @@
 
 Esta API permite interactuar con una base de datos de puntos de acceso WiFi, ofreciendo funcionalidades para obtener listas de puntos de acceso, buscar por ID, encontrar los más cercanos a una ubicación, y filtrar por alcaldía.
 
-## Configuración e Instalación
-
-Para configurar e iniciar el entorno de desarrollo y pruebas de esta API, sigue los pasos detallados a continuación:
+## Pasos para la Configuración e Instalación
 
 1. **Clonar el Repositorio**
 
-   Clona el repositorio usando el siguiente comando:
+   Clona el repositorio utilizando el siguiente comando en tu terminal:
+   ```bash
+   git clone https://github.com/thekye2012/PuntosDeAccesoWifiCDMX.git
    ```
-    git clone https://github.com/thekye2012/PuntosDeAccesoWifiCDMX.git
-    ```
+   Esto te permitirá obtener la última versión del código fuente del proyecto.
 
-2. **Abrir el Proyecto en Intellij IDEA**
+2. **Iniciar los Servicios con Docker Compose**
 
-Abre el proyecto clonado en Intellij IDEA o IDE De tu preferencia para comenzar a trabajar en él.
+   Abre una terminal en la carpeta del proyecto clonado y ejecuta el siguiente comando para iniciar los servicios utilizando Docker Compose:
+   ```bash
+   docker-compose up -d
+   ```
+   Esto iniciará todos los servicios necesarios, incluidos los contenedores Docker para la aplicación y cualquier base de datos o dependencia externa configurada.
 
-3. **Configuración de la Red del Servidor Docker**
+3. **Acceder a la Documentación Swagger**
 
-Si la red de tu servidor Docker está personalizada, debes ingresar al archivo `application.yml` y modificar el `url` para el servidor MongoDB.
+   Una vez que los servicios estén en funcionamiento, puedes acceder a la documentación de Swagger para explorar los endpoints disponibles y probar la API. La documentación de Swagger suele estar disponible en:
+   ```
+   http://localhost:3000/swagger-ui/index.html
+   ```
 
-5. **Ejecución del Archivo `docker-compose.yml`**
+### Solución de Problemas
 
-Ejecuta el archivo `docker-compose.yml`. En caso de que la ejecución de `docker-compose` falle en el servicio "puntosdeacceso", sigue estos pasos:
-- Ejecuta `mvn clean` y luego `mvn package` en la carpeta del proyecto.
-- Intenta iniciar nuevamente el servicio ejecutando el `docker-compose`.
-- Si el problema persiste, verifica que tu base de datos MongoDB esté correctamente configurada.
-
-6. **Acceso a la Documentación Swagger**
-
-Una vez iniciado el servicio, ingresa a `http://localhost:3000/swagger-ui/index.html` para ver la documentación Swagger y probar los endpoints disponibles.
-
+Si el servicio de "puntosdeacceso" no inicia correctamente, intenta ejecutar los siguientes comandos para limpiar y construir el proyecto antes de intentar nuevamente con Docker Compose:
+```bash
+mvn clean
+mvn package
+```
+Después de ejecutar estos comandos, vuelve a intentar iniciar los servicios con:
+```bash
+docker-compose up
+```
 
 ## API REST Endpoints
 
